@@ -43,9 +43,9 @@ async function generateAnalytics() {
     fs.writeFileSync(markdownPath, markdownContent);
     console.log(`Markdown summary saved to: ${markdownPath}`);
 
-    // Generate chart (commented out due to canvas architecture issues)
-    // await generateActivityChart(activityTrends, outputDir);
-    // console.log('Activity trend chart generated');
+    // Generate chart
+    await generateActivityChart(activityTrends, outputDir);
+    console.log('Activity trend chart generated');
 
     console.log('\n=== Analytics Summary ===');
     console.log(`Total Assets Registered: ${analyticsData.totalAssetsRegistered}`);

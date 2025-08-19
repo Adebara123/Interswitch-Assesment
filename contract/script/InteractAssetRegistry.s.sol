@@ -58,30 +58,30 @@ contract InteractAssetRegistryScript is Script {
 
         
         // Transfer the first asset
-        if (ownedAssets.length > 0) {
-            console.log("--- Transferring Asset ---");
-            console.log("Caller address:", caller);
+        // if (ownedAssets.length > 0) {
+        //     console.log("--- Transferring Asset ---");
+        //     console.log("Caller address:", caller);
             
-            uint256 assetToTransfer = ownedAssets[0];
-            address recipient = 0x70997970C51812dc3A010C7d01b50e0d17dc79C8;
+        //     uint256 assetToTransfer = ownedAssets[0];
+        //     address recipient = 0x70997970C51812dc3A010C7d01b50e0d17dc79C8;
             
-            console.log("Transferring asset ID:", assetToTransfer, "to:", recipient);
+        //     console.log("Transferring asset ID:", assetToTransfer, "to:", recipient);
             
-            vm.startBroadcast(callerPrivateKey);
-            assetRegistry.transferOwnership(assetToTransfer, recipient);
-            vm.stopBroadcast();
+        //     vm.startBroadcast(callerPrivateKey);
+        //     assetRegistry.transferOwnership(assetToTransfer, recipient);
+        //     vm.stopBroadcast();
             
-            console.log("Asset transferred successfully!");
+        //     console.log("Asset transferred successfully!");
             
-            // Verify the transfer
-            (string memory description, address newOwner, uint256 timestamp) = assetRegistry.getAsset(assetToTransfer);
-            console.log("Asset ownership updated:");
-            console.log("  Description:", description);
-            console.log("  New Owner:", newOwner);
-            console.log("  Timestamp:", timestamp);
+        //     // Verify the transfer
+        //     (string memory description, address newOwner, uint256 timestamp) = assetRegistry.getAsset(assetToTransfer);
+        //     console.log("Asset ownership updated:");
+        //     console.log("  Description:", description);
+        //     console.log("  New Owner:", newOwner);
+        //     console.log("  Timestamp:", timestamp);
             
-            console.log("Transfer completed!");
-        }
+        //     console.log("Transfer completed!");
+        // }
         
        
         
